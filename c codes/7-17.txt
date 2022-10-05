@@ -1,0 +1,28 @@
+#include <stdio.h>
+int proper(int n,int x);
+int main() {
+   int n,p;
+   printf("enter a number:\n");
+   scanf("%d",&n);
+   p=proper(n,n/2);
+   printf("the sum is = %d\n",p);
+    if(p==n)
+    printf("Its a perfect number");
+    return 0;
+}
+int proper(int n,int x)
+{
+    if(x==1)
+    {
+    printf("%d \n",x);
+    return 1;
+    }
+    if(n%x==0)
+    {
+    printf("%d+ ",x);
+    return(x+proper(n,x-1));
+    }
+    else
+    return proper(n,x-1);
+    
+}

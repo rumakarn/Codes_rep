@@ -1,0 +1,21 @@
+#include <stdio.h>
+//dynamic programming
+int Cnk(int n,int k);
+int main()
+{
+ unsigned int n,k,result;
+ printf("\n Please enter n = ");
+ scanf("%d",&n);
+ printf("\n Please enter k = ");
+ scanf("%d",&k);
+ result=Cnk(n,k);
+ printf("\n %d\n",result);
+ return 0;
+}
+
+int Cnk(int n,int k)
+{
+if(k==0 || k==n)
+    return 1;
+return Cnk(n-1,k-1)+Cnk(n-1,k);
+}

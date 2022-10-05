@@ -1,0 +1,52 @@
+#include <stdio.h>
+void func(int n);
+char alpha(int n);
+int main() {
+    int n,p;
+    
+    printf("Enter a number:\n");
+    scanf("%d",&n);
+    func(n);
+    return 0;
+   
+}
+ 
+void func(int n)
+{
+     if((n/10)>0)
+               func(n/10);
+               int r=n%10;
+               switch(r)
+               {
+                              case 0:
+                                                            printf("zero");
+                                                            break;
+                              case 1:
+                                                            printf("one ");
+                                                            break;
+                              case 2:
+                                                            printf("two ");
+                                                            break;
+                              case 3:
+                                                            printf("three ");
+                                                            break;
+                              case 4:
+                                                            printf("four ");
+                                                            break;
+                              case 5:
+                                                            printf("five ");
+                                                            break;
+                              case 6:
+                                                            printf("six ");
+                                                            break;
+                              case 7:
+                                                            printf("seven ");
+                                                            break;
+                              case 8:
+                                                            printf("eight ");
+                                                            break;
+                              case 9:
+                                                            printf("nine ");
+                                                            break;
+               }
+}

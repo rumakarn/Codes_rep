@@ -1,0 +1,33 @@
+// Online C++ compiler to run C++ program online
+
+#include <iostream>
+#include<math.h>
+using namespace std;
+
+
+
+
+int decimal(int num1,int num2){
+int carry=0, p=0, value, dec=0;
+	while(num1>0 || num2>0){
+		int num1r=num1%10;
+		int num2r=num2%10;
+		num1=num1/10;
+		num2=num2/10;
+		if(num1r+num2r+carry==2){carry=1;value=0;}
+		else if(num1r+num2r+carry==3){carry=1;value=1;}
+		else{value=num1r+num2r+carry;carry=0;}
+		dec=dec+pow(10,p)*(value);
+		p++;
+	}dec=dec+pow(10,p)*carry;
+	return dec;
+}
+
+
+
+int main(){
+
+int a,b;
+cin>>a>>b;
+cout<<decimal(a,b)<<endl;
+return 0;
